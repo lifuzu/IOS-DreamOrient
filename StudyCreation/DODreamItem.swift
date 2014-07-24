@@ -9,9 +9,9 @@
 import UIKit
 
 class DODreamItem: NSObject {
-    var itemSubject : String
-    var requiredCredits: Int
-    var currentCredits: Int
+    var itemSubject : String?
+    var requiredCredits: Int?
+    var currentCredits: Int = 3
     
     var itemSuggestedCredits: UInt?
     var itemStatus: UInt?
@@ -25,10 +25,10 @@ class DODreamItem: NSObject {
     var itemTags : String?
     var itemComments : DODreamComment[] = []
     
-    
-    init() {
-        self.itemSubject = ""
-        self.requiredCredits = 0
-        self.currentCredits = 0
+    init() {}
+    init(itemSubject: String, requiredCredits: Int) {
+        self.itemSubject = itemSubject
+        self.requiredCredits = requiredCredits
+        self.currentCredits = 3
     }
 }

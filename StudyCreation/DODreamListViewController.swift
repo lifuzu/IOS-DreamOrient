@@ -8,8 +8,9 @@
 
 import UIKit
 import QuartzCore
+import CoreData
 
-class DODreamListViewController: UITableViewController, DORuleListViewControllerDelegate {
+class DODreamListViewController: UITableViewController, DORuleListViewControllerDelegate, NSFetchedResultsControllerDelegate {
 
     var dreamItems = Array<DODreamItem>()
     var indexPath: NSIndexPath?
@@ -32,6 +33,37 @@ class DODreamListViewController: UITableViewController, DORuleListViewController
         dreamItems.append(item3)
     }
     
+    func initData(){
+        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context: NSManagedObjectContext = appDelegate.managedObjectContext
+        
+        var newDream = NSEntityDescription.insertNewObjectForEntityForName("Dreams", inManagedObjectContext: context) as NSManagedObject
+        newDream.setValue("Spectacular SpiderMan", forKey: "subject")
+        newDream.setValue(20, forKey: "requiredCredits")
+        
+        context.save(nil)
+        
+        println(newDream)
+        println("Object saved.")
+    }
+    
+    func loadData(){
+        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context: NSManagedObjectContext = appDelegate.managedObjectContext
+        
+        var request = NSFetchRequest(entityName: kEntityNameDreamEntity)
+        request.returnsObjectsAsFaults = false
+        
+        var results: NSArray = context.executeFetchRequest(request, error: nil)
+        if results.count > 0 {
+            for res : AnyObject in results {
+                var strSubject = res.valueForKey("subject") as String
+                var intCredits = res.valueForKey("requiredCredits") as Int
+                self.dreamItems.append(DODreamItem(itemSubject: strSubject, requiredCredits: intCredits))
+            }
+        }
+    }
+    
     /*init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
@@ -41,6 +73,8 @@ class DODreamListViewController: UITableViewController, DORuleListViewController
         super.viewDidLoad()
 
         self.loadInitialData()
+        //self.initData()
+        self.loadData()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -153,5 +187,37 @@ class DODreamListViewController: UITableViewController, DORuleListViewController
         }
     }
     
+    // #pragma mark - Core Data stack
+    var managedObjectContext: NSManagedObjectContext {
+    get {
+        if !_managedObjectContext {
+            _managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+        }
+        
+        return _managedObjectContext!
+    }
+    }
+    var _managedObjectContext: NSManagedObjectContext? = nil
+    
+    var fetchedResultsController: NSFetchedResultsController {
+    get {
+        if !_fetchedResultsController {
+            // set up fetch request
+            var fetchRequest = NSFetchRequest()
+            fetchRequest.entity = NSEntityDescription.entityForName(kEntityNameDreamEntity, inManagedObjectContext: (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext)
+            
+            // sort by last updated
+            var sortDescriptor = NSSortDescriptor(key: "requiredCredits", ascending: false)
+            fetchRequest.sortDescriptors = [sortDescriptor]
+            fetchRequest.fetchBatchSize = 20
+            
+            _fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext, sectionNameKeyPath: nil, cacheName: "allDreamsCache")
+            _fetchedResultsController!.delegate = self
+        }
+        
+        return _fetchedResultsController!;
+    }
+    }
+    var _fetchedResultsController: NSFetchedResultsController? = nil
 
 }

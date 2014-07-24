@@ -17,6 +17,9 @@
 		620C39F2197ED87900EEAF8C /* DODreamComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C39F1197ED87900EEAF8C /* DODreamComment.swift */; };
 		620C39F4197ED89300EEAF8C /* DODreamLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C39F3197ED89300EEAF8C /* DODreamLog.swift */; };
 		620C39F6197EEAD900EEAF8C /* DODreamSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C39F5197EEAD900EEAF8C /* DODreamSet.swift */; };
+		62C612C019807F32005200D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C612BF19807F32005200D4 /* Constants.swift */; };
+		62C612C21980883A005200D4 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C612C11980883A005200D4 /* CoreDataProvider.swift */; };
+		62C612C51980A69D005200D4 /* DreamOrient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62C612C31980A69D005200D4 /* DreamOrient.xcdatamodeld */; };
 		62F6EE83197833F300F7A94F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE82197833F300F7A94F /* RootViewController.swift */; };
 		62F6EE85197870DA00F7A94F /* DORuleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE84197870DA00F7A94F /* DORuleListViewController.swift */; };
 		62F6EE87197871A800F7A94F /* DODreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE86197871A800F7A94F /* DODreamListViewController.swift */; };
@@ -47,6 +50,13 @@
 			remoteGlobalIDString = 620817B519774C9000512439;
 			remoteInfo = StudyCreation;
 		};
+		62C612C61980D27B005200D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 620817AE19774C9000512439 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 620817B519774C9000512439;
+			remoteInfo = StudyCreation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +74,9 @@
 		620C39F1197ED87900EEAF8C /* DODreamComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODreamComment.swift; sourceTree = "<group>"; };
 		620C39F3197ED89300EEAF8C /* DODreamLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODreamLog.swift; sourceTree = "<group>"; };
 		620C39F5197EEAD900EEAF8C /* DODreamSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODreamSet.swift; sourceTree = "<group>"; };
+		62C612BF19807F32005200D4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		62C612C11980883A005200D4 /* CoreDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		62C612C41980A69D005200D4 /* DreamOrient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamOrient.xcdatamodel; sourceTree = "<group>"; };
 		62F6EE82197833F300F7A94F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		62F6EE84197870DA00F7A94F /* DORuleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DORuleListViewController.swift; sourceTree = "<group>"; };
 		62F6EE86197871A800F7A94F /* DODreamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODreamListViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +142,9 @@
 				620C39F1197ED87900EEAF8C /* DODreamComment.swift */,
 				620C39F3197ED89300EEAF8C /* DODreamLog.swift */,
 				620C39F5197EEAD900EEAF8C /* DODreamSet.swift */,
+				62C612BF19807F32005200D4 /* Constants.swift */,
+				62C612C11980883A005200D4 /* CoreDataProvider.swift */,
+				62C612C31980A69D005200D4 /* DreamOrient.xcdatamodeld */,
 			);
 			path = StudyCreation;
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 				620817C519774C9000512439 /* PBXTargetDependency */,
 				620817D619775A2900512439 /* PBXTargetDependency */,
 				620817D819775A2A00512439 /* PBXTargetDependency */,
+				62C612C71980D27B005200D4 /* PBXTargetDependency */,
 			);
 			name = StudyCreationTests;
 			productName = StudyCreationTests;
@@ -265,12 +282,15 @@
 				620C39EE197ED73500EEAF8C /* DODreamActor.swift in Sources */,
 				620C39F6197EEAD900EEAF8C /* DODreamSet.swift in Sources */,
 				620C39F4197ED89300EEAF8C /* DODreamLog.swift in Sources */,
+				62C612C51980A69D005200D4 /* DreamOrient.xcdatamodeld in Sources */,
 				62F6EE83197833F300F7A94F /* RootViewController.swift in Sources */,
 				620817BC19774C9000512439 /* AppDelegate.swift in Sources */,
 				62F6EE89197873D100F7A94F /* DORuleItemViewController.swift in Sources */,
 				62F6EE8C19787A4900F7A94F /* DORuleItem.swift in Sources */,
+				62C612C019807F32005200D4 /* Constants.swift in Sources */,
 				620C39EC1979919000EEAF8C /* DODreamItem.swift in Sources */,
 				620C39F0197ED85400EEAF8C /* DODreamReviewer.swift in Sources */,
+				62C612C21980883A005200D4 /* CoreDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +319,11 @@
 			isa = PBXTargetDependency;
 			target = 620817B519774C9000512439 /* StudyCreation */;
 			targetProxy = 620817D719775A2A00512439 /* PBXContainerItemProxy */;
+		};
+		62C612C71980D27B005200D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 620817B519774C9000512439 /* StudyCreation */;
+			targetProxy = 62C612C61980D27B005200D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -469,6 +494,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		62C612C31980A69D005200D4 /* DreamOrient.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				62C612C41980A69D005200D4 /* DreamOrient.xcdatamodel */,
+			);
+			currentVersion = 62C612C41980A69D005200D4 /* DreamOrient.xcdatamodel */;
+			path = DreamOrient.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 620817AE19774C9000512439 /* Project object */;
 }

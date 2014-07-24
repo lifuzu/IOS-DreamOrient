@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Dream Orients-->
+        <!--View Controller - Dream Orient-->
         <scene sceneID="HOg-dL-9u9">
             <objects>
                 <viewController id="Me8-Gn-gJo" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" title="Dream Orients" id="Wjn-kc-aEr">
+                    <navigationItem key="navigationItem" title="Dream Orient" id="Wjn-kc-aEr">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="HrV-5Y-BEg">
                             <connections>
                                 <segue destination="66R-fb-Q29" kind="push" id="RjW-1z-tEJ"/>

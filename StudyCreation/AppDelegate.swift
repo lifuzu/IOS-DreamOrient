@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
+    var coreDataProvider: CoreDataProvider?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
@@ -19,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //self.window!.backgroundColor = UIColor.whiteColor()
         //self.window!.makeKeyAndVisible()
+        self.coreDataProvider = CoreDataProvider()
         return true
     }
 
@@ -42,8 +45,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        self.saveContext()
     }
 
+    // #pragma mark - Core Data stack
+    
+    func saveContext () {
+        self.coreDataProvider!.saveContext()
+    }
+    
+    var managedObjectContext: NSManagedObjectContext {
+    return self.coreDataProvider!.managedObjectContext
+    }
+    
+    var managedObjectModel: NSManagedObjectModel {
+    return self.coreDataProvider!.managedObjectModel
+    }
+    
+    var persistentStoreCoordinator: NSPersistentStoreCoordinator {
+    return self.coreDataProvider!.persistentStoreCoordinator
+    }
 
 }
 
