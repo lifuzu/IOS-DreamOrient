@@ -10,7 +10,7 @@ import UIKit
 
 class DORuleItemViewController: UIViewController {
     
-    @lazy var ruleItem = DORuleItem()
+    var ruleItem: DORuleItem?
     var ruleName: String = ""
     
     @IBOutlet var textField : UITextField = nil
@@ -23,7 +23,7 @@ class DORuleItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // when enter as edit mode, rule name should be passed in
         textField.text = ruleName
     }
 
@@ -41,8 +41,7 @@ class DORuleItemViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if (sender as? UIButton == self.doneButton) {return}
         if (!self.textField.text.isEmpty) {
-            self.ruleItem.itemName = self.textField.text
-            self.ruleItem.itemCredit = 0
+            self.ruleItem = DORuleItem(itemName: self.textField.text, itemCredit: 0)
         }
     }
 

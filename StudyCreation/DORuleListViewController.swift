@@ -19,14 +19,11 @@ protocol DORuleListViewControllerDelegate {
     var credits: Int = 0
     
     func loadInitialData() {
-        var item1 = DORuleItem()
-        item1.itemName = "Clean Room"
+        var item1 = DORuleItem(itemName: "Clean Room", itemCredit: 1)
         ruleItems.append(item1)
-        var item2 = DORuleItem()
-        item2.itemName = "Good Sleep Self"
+        var item2 = DORuleItem(itemName: "Good Sleep Self", itemCredit: 1)
         ruleItems.append(item2)
-        var item3 = DORuleItem()
-        item3.itemName = "No Wetting The Bed"
+        var item3 = DORuleItem(itemName: "No Wetting The Bed", itemCredit: 1)
         ruleItems.append(item3)
     }
     
@@ -60,10 +57,10 @@ protocol DORuleListViewControllerDelegate {
     
     @IBAction func unwindToRuleList(segue: UIStoryboardSegue!) {
         var source : DORuleItemViewController = segue.sourceViewController as DORuleItemViewController
-        var item : DORuleItem = source.ruleItem
+        var item : DORuleItem? = source.ruleItem
         
-        if (!item.itemName.isEmpty) {
-            self.ruleItems.append(item)
+        if item {
+            self.ruleItems.append(item!)
             self.tableView.reloadData()
         }
     }
@@ -142,7 +139,7 @@ protocol DORuleListViewControllerDelegate {
             let index = tableView.indexPathForSelectedRow()
             var ruleItem = ruleItems[index.row]
             let vc = segue.destinationViewController as DORuleItemViewController
-            vc.ruleName = ruleItem.itemName
+            vc.ruleName = ruleItem.itemName!
         } else if segue.identifier? == "listRule" {
             println("Hello")
         }

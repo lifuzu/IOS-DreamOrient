@@ -9,11 +9,13 @@
 import UIKit
 
 class DORuleItem: NSObject {
-    var itemName: String;
-    var itemCredit: Int;
+    var itemName: String?
+    var itemDescription: String?
+    var itemCredit: Int?
     
-    init(){
-        self.itemName = ""
-        self.itemCredit = 0
+    init(itemName: String!, itemCredit: Int!, itemDescription: String = ""){
+        self.itemName = itemName
+        self.itemCredit = itemCredit
+        self.itemDescription = itemDescription
     }
 }
