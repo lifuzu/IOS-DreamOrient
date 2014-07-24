@@ -56,9 +56,6 @@ class DODreamListViewController: UITableViewController, DORuleListViewController
         newDream.setValue(item.requiredCredits, forKey: "requiredCredits")
         
         context.save(nil)
-        
-        println(newDream)
-        println("Object saved.")
     }
     
     func loadData(){

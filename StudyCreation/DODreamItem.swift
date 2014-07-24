@@ -11,7 +11,7 @@ import UIKit
 class DODreamItem: NSObject {
     var itemSubject : String?
     var requiredCredits: Int?
-    var currentCredits: Int = 3
+    var currentCredits: Int = 0
     
     var itemSuggestedCredits: UInt?
     var itemStatus: UInt?
@@ -29,6 +29,6 @@ class DODreamItem: NSObject {
     init(itemSubject: String, requiredCredits: Int) {
         self.itemSubject = itemSubject
         self.requiredCredits = requiredCredits
-        self.currentCredits = 3
+        self.currentCredits = 0
     }
 }
