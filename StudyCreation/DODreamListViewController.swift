@@ -47,6 +47,20 @@ class DODreamListViewController: UITableViewController, DORuleListViewController
         println("Object saved.")
     }
     
+    func initData(item : DODreamItem!){
+        var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        var context: NSManagedObjectContext = appDelegate.managedObjectContext
+        
+        var newDream = NSEntityDescription.insertNewObjectForEntityForName("Dreams", inManagedObjectContext: context) as NSManagedObject
+        newDream.setValue(item.itemSubject, forKey: "subject")
+        newDream.setValue(item.requiredCredits, forKey: "requiredCredits")
+        
+        context.save(nil)
+        
+        println(newDream)
+        println("Object saved.")
+    }
+    
     func loadData(){
         var appDelegate: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         var context: NSManagedObjectContext = appDelegate.managedObjectContext
@@ -139,6 +153,17 @@ class DODreamListViewController: UITableViewController, DORuleListViewController
         }
     }
     
+    @IBAction func unwindToDreamList(segue: UIStoryboardSegue!) {
+        var source : DODreamItemViewController = segue.sourceViewController as DODreamItemViewController
+        var item : DODreamItem? = source.dreamItem
+        
+        if item {
+            self.initData(item)
+            self.dreamItems.append(item!)
+            self.tableView.reloadData()
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
@@ -181,7 +206,7 @@ class DODreamListViewController: UITableViewController, DORuleListViewController
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "listRule" {
+        if segue.identifier? == "listRule" {
             let vc = segue.destinationViewController as DORuleListViewController
             vc.delegate = self
         }

@@ -20,6 +20,7 @@
 		62C612C019807F32005200D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C612BF19807F32005200D4 /* Constants.swift */; };
 		62C612C21980883A005200D4 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C612C11980883A005200D4 /* CoreDataProvider.swift */; };
 		62C612C51980A69D005200D4 /* DreamOrient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62C612C31980A69D005200D4 /* DreamOrient.xcdatamodeld */; };
+		62C612F319818BC4005200D4 /* DODreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C612F219818BC4005200D4 /* DODreamItemViewController.swift */; };
 		62F6EE83197833F300F7A94F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE82197833F300F7A94F /* RootViewController.swift */; };
 		62F6EE85197870DA00F7A94F /* DORuleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE84197870DA00F7A94F /* DORuleListViewController.swift */; };
 		62F6EE87197871A800F7A94F /* DODreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE86197871A800F7A94F /* DODreamListViewController.swift */; };
@@ -77,6 +78,8 @@
 		62C612BF19807F32005200D4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		62C612C11980883A005200D4 /* CoreDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 		62C612C41980A69D005200D4 /* DreamOrient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamOrient.xcdatamodel; sourceTree = "<group>"; };
+		62C612F119818A27005200D4 /* DODreamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DODreamListViewController.h; sourceTree = "<group>"; };
+		62C612F219818BC4005200D4 /* DODreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODreamItemViewController.swift; sourceTree = "<group>"; };
 		62F6EE82197833F300F7A94F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		62F6EE84197870DA00F7A94F /* DORuleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DORuleListViewController.swift; sourceTree = "<group>"; };
 		62F6EE86197871A800F7A94F /* DODreamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODreamListViewController.swift; sourceTree = "<group>"; };
@@ -126,15 +129,20 @@
 			isa = PBXGroup;
 			children = (
 				620817BB19774C9000512439 /* AppDelegate.swift */,
+				62C612C11980883A005200D4 /* CoreDataProvider.swift */,
+				62C612BF19807F32005200D4 /* Constants.swift */,
 				620817BD19774C9000512439 /* Images.xcassets */,
 				620817B919774C9000512439 /* Supporting Files */,
 				620817D319774CA400512439 /* Main.storyboard */,
+				62C612C31980A69D005200D4 /* DreamOrient.xcdatamodeld */,
 				62F6EE82197833F300F7A94F /* RootViewController.swift */,
 				62F6EE84197870DA00F7A94F /* DORuleListViewController.swift */,
 				62F6EE8A197877F700F7A94F /* DORuleListViewController.h */,
-				62F6EE86197871A800F7A94F /* DODreamListViewController.swift */,
 				62F6EE88197873D100F7A94F /* DORuleItemViewController.swift */,
 				62F6EE8B19787A4900F7A94F /* DORuleItem.swift */,
+				62F6EE86197871A800F7A94F /* DODreamListViewController.swift */,
+				62C612F119818A27005200D4 /* DODreamListViewController.h */,
+				62C612F219818BC4005200D4 /* DODreamItemViewController.swift */,
 				62F6EE8D19788E7900F7A94F /* ThumbUpDownTableViewCell.swift */,
 				620C39EB1979919000EEAF8C /* DODreamItem.swift */,
 				620C39ED197ED73500EEAF8C /* DODreamActor.swift */,
@@ -142,9 +150,6 @@
 				620C39F1197ED87900EEAF8C /* DODreamComment.swift */,
 				620C39F3197ED89300EEAF8C /* DODreamLog.swift */,
 				620C39F5197EEAD900EEAF8C /* DODreamSet.swift */,
-				62C612BF19807F32005200D4 /* Constants.swift */,
-				62C612C11980883A005200D4 /* CoreDataProvider.swift */,
-				62C612C31980A69D005200D4 /* DreamOrient.xcdatamodeld */,
 			);
 			path = StudyCreation;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				620C39F2197ED87900EEAF8C /* DODreamComment.swift in Sources */,
 				62F6EE87197871A800F7A94F /* DODreamListViewController.swift in Sources */,
 				620C39EE197ED73500EEAF8C /* DODreamActor.swift in Sources */,
+				62C612F319818BC4005200D4 /* DODreamItemViewController.swift in Sources */,
 				620C39F6197EEAD900EEAF8C /* DODreamSet.swift in Sources */,
 				620C39F4197ED89300EEAF8C /* DODreamLog.swift in Sources */,
 				62C612C51980A69D005200D4 /* DreamOrient.xcdatamodeld in Sources */,

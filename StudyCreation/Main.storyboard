@@ -70,12 +70,14 @@
                             </tableViewCell>
                         </prototypes>
                         <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="66R-fb-Q29" id="HJE-7i-YPX"/>
-                            <outlet property="delegate" destination="66R-fb-Q29" id="H5o-lA-ryu"/>
-                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Faf-Mj-fxk"/>
+                    <navigationItem key="navigationItem" id="Faf-Mj-fxk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PIo-Og-uEf">
+                            <connections>
+                                <segue destination="ILb-uN-Fy0" kind="push" id="hot-0T-KD1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="MvE-gl-omT" id="73g-qj-jRc"/>
                     </connections>
@@ -83,6 +85,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDn-W5-gfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1214" y="392"/>
+        </scene>
+        <!--Dream Item View Controller-->
+        <scene sceneID="DtY-Bj-6Y7">
+            <objects>
+                <viewController id="ILb-uN-Fy0" customClass="DODreamItemViewController" customModule="StudyCreation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kig-wB-71u"/>
+                        <viewControllerLayoutGuide type="bottom" id="cg5-nH-Dht"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lHt-tQ-7hN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dream Subject" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Has-ey-jue">
+                                <rect key="frame" x="20" y="135" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Required Credits" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-Ro-NIS">
+                                <rect key="frame" x="20" y="186" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1fk-Au-4o0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PsD-uR-VF4">
+                            <connections>
+                                <segue destination="WA0-wC-AbD" kind="unwind" unwindAction="unwindToDreamList:" id="hxw-DS-j5a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="PsD-uR-VF4" id="DKT-pu-PF7"/>
+                        <outlet property="textDreamRequiredCredits" destination="pwW-Ro-NIS" id="kgm-n5-kMQ"/>
+                        <outlet property="textDreamSubject" destination="Has-ey-jue" id="uxx-wF-TEA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYr-kD-TNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="WA0-wC-AbD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="1091"/>
         </scene>
         <!--Rule List View Controller-->
         <scene sceneID="Fvx-rP-9BC">
