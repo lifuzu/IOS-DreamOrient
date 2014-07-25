@@ -8,8 +8,17 @@
         <attribute name="requiredCredits" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Rules" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="credit" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entiryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifiedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Dreams" positionX="-333" positionY="-36" width="128" height="73"/>
         <element name="Actors" positionX="-117" positionY="108" width="128" height="73"/>
+        <element name="Rules" positionX="-207" positionY="72" width="128" height="30"/>
     </elements>
 </model>

@@ -21,6 +21,7 @@
 		62C612C21980883A005200D4 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C612C11980883A005200D4 /* CoreDataProvider.swift */; };
 		62C612C51980A69D005200D4 /* DreamOrient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62C612C31980A69D005200D4 /* DreamOrient.xcdatamodeld */; };
 		62C612F319818BC4005200D4 /* DODreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C612F219818BC4005200D4 /* DODreamItemViewController.swift */; };
+		62C612F51981AC97005200D4 /* DORuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C612F41981AC97005200D4 /* DORuleProtocol.swift */; };
 		62F6EE83197833F300F7A94F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE82197833F300F7A94F /* RootViewController.swift */; };
 		62F6EE85197870DA00F7A94F /* DORuleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE84197870DA00F7A94F /* DORuleListViewController.swift */; };
 		62F6EE87197871A800F7A94F /* DODreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F6EE86197871A800F7A94F /* DODreamListViewController.swift */; };
@@ -80,6 +81,7 @@
 		62C612C41980A69D005200D4 /* DreamOrient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamOrient.xcdatamodel; sourceTree = "<group>"; };
 		62C612F119818A27005200D4 /* DODreamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DODreamListViewController.h; sourceTree = "<group>"; };
 		62C612F219818BC4005200D4 /* DODreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODreamItemViewController.swift; sourceTree = "<group>"; };
+		62C612F41981AC97005200D4 /* DORuleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DORuleProtocol.swift; sourceTree = "<group>"; };
 		62F6EE82197833F300F7A94F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		62F6EE84197870DA00F7A94F /* DORuleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DORuleListViewController.swift; sourceTree = "<group>"; };
 		62F6EE86197871A800F7A94F /* DODreamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DODreamListViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				62F6EE84197870DA00F7A94F /* DORuleListViewController.swift */,
 				62F6EE8A197877F700F7A94F /* DORuleListViewController.h */,
 				62F6EE88197873D100F7A94F /* DORuleItemViewController.swift */,
+				62C612F41981AC97005200D4 /* DORuleProtocol.swift */,
 				62F6EE8B19787A4900F7A94F /* DORuleItem.swift */,
 				62F6EE86197871A800F7A94F /* DODreamListViewController.swift */,
 				62C612F119818A27005200D4 /* DODreamListViewController.h */,
@@ -227,7 +230,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = weimed;
+				ORGANIZATIONNAME = "Weimed LLC (weimed.com)";
 				TargetAttributes = {
 					620817B519774C9000512439 = {
 						CreatedOnToolsVersion = 6.0;
@@ -292,6 +295,7 @@
 				62F6EE83197833F300F7A94F /* RootViewController.swift in Sources */,
 				620817BC19774C9000512439 /* AppDelegate.swift in Sources */,
 				62F6EE89197873D100F7A94F /* DORuleItemViewController.swift in Sources */,
+				62C612F51981AC97005200D4 /* DORuleProtocol.swift in Sources */,
 				62F6EE8C19787A4900F7A94F /* DORuleItem.swift in Sources */,
 				62C612C019807F32005200D4 /* Constants.swift in Sources */,
 				620C39EC1979919000EEAF8C /* DODreamItem.swift in Sources */,
